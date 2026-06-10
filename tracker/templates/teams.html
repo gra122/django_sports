@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Teams</h1>
+
+<ul>
+{% for team in teams %}
+    <li>
+        {{ team.name }} -
+        Coach: {{ team.coach }} -
+        Sport: {{ team.sport }}
+    </li>
+{% endfor %}
+</ul>
+
+<a href="/">Back Home</a>
+</body>
+</html>

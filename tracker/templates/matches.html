@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Matches</h1>
+
+<ul>
+{% for match in matches %}
+    <li>
+        {{ match.team1 }} {{ match.score_team1 }}
+        -
+        {{ match.score_team2 }} {{ match.team2 }}
+        ({{ match.date }})
+    </li>
+{% endfor %}
+</ul>
+
+<a href="/">Back Home</a>
